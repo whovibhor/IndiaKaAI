@@ -10,172 +10,8 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components/navbar.css">
     <link rel="stylesheet" href="styles/pages/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Blog Specific Styles */
-        .blog-hero {
-            background: linear-gradient(135deg, #0f766e, #14b8a6);
-            color: white;
-            padding: 8rem 2rem 4rem;
-            text-align: center;
-        }
-
-        .blog-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 4rem;
-        }
-
-        .blog-filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.5rem 1rem;
-            border: 2px solid var(--primary-color);
-            border-radius: 2rem;
-            background: transparent;
-            color: var(--primary-color);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .filter-btn.active {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .blog-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .blog-card {
-            background: white;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-card img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-        }
-
-        .blog-content {
-            padding: 1.5rem;
-        }
-
-        .blog-meta {
-            display: flex;
-            gap: 1rem;
-            margin: 1rem 0;
-            font-size: 0.875rem;
-            color: #666;
-        }
-
-        .blog-tag {
-            background: var(--light-bg);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            position: sticky;
-            top: 100px;
-        }
-
-        .sidebar-widget {
-            background: white;
-            border-radius: 1rem;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .search-box {
-            position: relative;
-            margin-bottom: 1rem;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            padding-left: 2.5rem;
-            border: 2px solid var(--light-bg);
-            border-radius: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .search-box::before {
-            content: "🔍";
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .popular-posts {
-            list-style: none;
-            padding: 0;
-        }
-
-        .popular-post {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--light-bg);
-        }
-
-        .popular-post img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 0.5rem;
-        }
-
-        .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag-cloud a {
-            background: var(--light-bg);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-            text-decoration: none;
-            color: var(--text-color);
-            transition: all 0.3s ease;
-        }
-
-        .tag-cloud a:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .blog-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -343,11 +179,11 @@
             </div>
             <div class="footer-section">
                 <h3>Connect With Us</h3>
-                <div class="social-icons">
-                    <a href="#" aria-label="Instagram">📸</a>
-                    <a href="#" aria-label="Reddit">🔴</a>
-                    <a href="#" aria-label="Twitter">🐦</a>
-                    <a href="#" aria-label="YouTube">📺</a>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram" style="color: #E1306C;"><i class="fab fa-instagram "></i></a>
+                    <a href="#" aria-label="Reddit" style="color: #FF4500;"><i class="fab fa-reddit "></i></a>
+                    <a href="#" aria-label="Twitter" style="color: #1DA1F2;"><i class="fab fa-twitter "></i></a>
+                    <a href="#" aria-label="YouTube" style="color: #FF0000;"><i class="fab fa-youtube "></i></a>
                 </div>
             </div>
             <div class="footer-section">
