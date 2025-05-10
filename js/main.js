@@ -35,4 +35,41 @@ window.addEventListener('scroll', () => {
             header.classList.remove('scrolled');
         }
     }
-}); 
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+        const clickedOutside = !mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target);
+        if (clickedOutside) {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+});
+
+
+//faq
+// FAQ Toggle Functionality
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(faqItem => {
+            faqItem.classList.remove('active');
+        });
+
+        // If the clicked item wasn't active, make it active
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    });
+});
