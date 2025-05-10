@@ -84,9 +84,6 @@
     width: 80%;
 }
 
-<<<<<<< HEAD
-/* Responsive Design */
-=======
 /* Mobile Menu Button Styles */
 .mobile-menu-btn {
     display: none;
@@ -152,16 +149,8 @@
 }
 
 /* Remove conflicting styles */
->>>>>>> Master_R
 @media (max-width: 768px) {
     .nav-container {
         padding: 1rem;
     }
-<<<<<<< HEAD
-
-    .nav-links {
-        display: none;
-    }
-=======
->>>>>>> Master_R
 }

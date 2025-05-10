@@ -1,16 +1,9 @@
 /* About Hero Section */
 .about-hero {
-<<<<<<< HEAD
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    text-align: center;
-    padding: 6rem 2rem;
-=======
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
     color: white;
     padding: 8rem 2rem 4rem;
     text-align: center;
->>>>>>> Master_R
 }
 
 .about-hero h1 {
@@ -32,14 +25,6 @@
 }
 
 .mission-content {
-<<<<<<< HEAD
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 4rem;
-}
-
-.mission-content h2 {
-=======
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -47,18 +32,11 @@
 }
 
 .mission-text h2 {
->>>>>>> Master_R
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: var(--text-color);
 }
 
-<<<<<<< HEAD
-.mission-content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--text-muted);
-=======
 .mission-text p {
     color: var(--text-muted);
     line-height: 1.8;
@@ -142,30 +120,20 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
->>>>>>> Master_R
 }
 
 .values-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-<<<<<<< HEAD
-=======
     margin-top: 2rem;
->>>>>>> Master_R
 }
 
 .value-card {
     background: white;
     padding: 2rem;
-<<<<<<< HEAD
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-=======
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
->>>>>>> Master_R
     transition: transform 0.3s ease;
 }
 
@@ -173,15 +141,6 @@
     transform: translateY(-5px);
 }
 
-<<<<<<< HEAD
-.value-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    display: block;
-}
-
-=======
->>>>>>> Master_R
 .value-card h3 {
     margin-bottom: 1rem;
     color: var(--text-color);
@@ -192,71 +151,6 @@
     line-height: 1.6;
 }
 
-<<<<<<< HEAD
-/* Team Section */
-.team {
-    background: var(--bg-light);
-    padding: 4rem 2rem;
-}
-
-.team h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--text-color);
-}
-
-.team-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.team-member {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.team-member img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.team-member h3 {
-    margin: 1.5rem 0 0.5rem;
-    color: var(--text-color);
-}
-
-.member-role {
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-}
-
-.member-social {
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.member-social a {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    transition: color 0.3s ease;
-}
-
-.member-social a:hover {
-    color: var(--primary-color);
-}
-
-=======
->>>>>>> Master_R
 /* Support Section */
 .support {
     max-width: 1200px;
@@ -316,18 +210,12 @@
         font-size: 1rem;
     }
 
-<<<<<<< HEAD
-    .mission-content h2,
-    .team h2,
-    .support h2 {
-=======
     .mission-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
     .mission-text h2 {
->>>>>>> Master_R
         font-size: 2rem;
     }
 

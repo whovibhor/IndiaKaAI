@@ -1,16 +1,9 @@
 /* Contact Hero Section */
 .contact-hero {
-<<<<<<< HEAD
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    text-align: center;
-    padding: 6rem 2rem;
-=======
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
     color: white;
     padding: 8rem 2rem 4rem;
     text-align: center;
->>>>>>> Master_R
 }
 
 .contact-hero h1 {
@@ -24,13 +17,6 @@
     margin: 0 auto;
 }
 
-<<<<<<< HEAD
-/* Contact Container */
-.contact-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-=======
 /* Contact Section */
 .contact {
     max-width: 1200px;
@@ -39,27 +25,11 @@
 }
 
 .contact-container {
->>>>>>> Master_R
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
 }
 
-<<<<<<< HEAD
-/* Contact Form Section */
-.contact-form-section {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form-section h2 {
-    margin-bottom: 2rem;
-    color: var(--text-color);
-}
-
-=======
 /* Contact Form */
 .contact-form {
     background: white;
@@ -68,7 +38,6 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
->>>>>>> Master_R
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -81,48 +50,21 @@
 }
 
 .form-group input,
-<<<<<<< HEAD
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-=======
 .form-group textarea {
     width: 100%;
     padding: 0.75rem;
     border: 2px solid var(--light-bg);
     border-radius: 0.5rem;
->>>>>>> Master_R
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
-<<<<<<< HEAD
-.form-group select:focus,
-=======
->>>>>>> Master_R
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
 }
 
-<<<<<<< HEAD
-/* Contact Info Section */
-.contact-info {
-    padding: 2rem;
-}
-
-.contact-info h2 {
-    margin-bottom: 2rem;
-    color: var(--text-color);
-}
-
-.info-cards {
-    display: grid;
-=======
 .form-group textarea {
     height: 150px;
     resize: vertical;
@@ -132,27 +74,14 @@
 .contact-info {
     display: flex;
     flex-direction: column;
->>>>>>> Master_R
     gap: 2rem;
 }
 
 .info-card {
     background: white;
     padding: 2rem;
-<<<<<<< HEAD
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.info-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    display: block;
-=======
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
->>>>>>> Master_R
 }
 
 .info-card h3 {
@@ -160,23 +89,6 @@
     color: var(--text-color);
 }
 
-<<<<<<< HEAD
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.social-links a {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-=======
 .info-card p {
     color: var(--text-muted);
     line-height: 1.6;
@@ -191,25 +103,17 @@
 
 .info-card a:hover {
     color: var(--secondary-color);
->>>>>>> Master_R
 }
 
 /* FAQ Section */
 .faq {
-<<<<<<< HEAD
-    background: var(--bg-light);
-=======
     background: var(--light-bg);
->>>>>>> Master_R
     padding: 4rem 2rem;
 }
 
 .faq h2 {
     text-align: center;
-<<<<<<< HEAD
-=======
     font-size: 2.5rem;
->>>>>>> Master_R
     margin-bottom: 3rem;
     color: var(--text-color);
 }
@@ -225,10 +129,6 @@
 .faq-item {
     background: white;
     padding: 2rem;
-<<<<<<< HEAD
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-=======
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -255,14 +155,11 @@
 
 .faq-item:hover::before {
     transform: scaleY(1);
->>>>>>> Master_R
 }
 
 .faq-item h3 {
     color: var(--text-color);
     margin-bottom: 1rem;
-<<<<<<< HEAD
-=======
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -273,14 +170,11 @@
     content: '❓';
     font-size: 1.5rem;
     opacity: 0.7;
->>>>>>> Master_R
 }
 
 .faq-item p {
     color: var(--text-muted);
     line-height: 1.6;
-<<<<<<< HEAD
-=======
     margin: 0;
     max-height: 0;
     overflow: hidden;
@@ -307,19 +201,10 @@
     border: none;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
->>>>>>> Master_R
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-<<<<<<< HEAD
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-=======
->>>>>>> Master_R
     .contact-hero h1 {
         font-size: 2.5rem;
     }
@@ -328,10 +213,6 @@
         font-size: 1rem;
     }
 
-<<<<<<< HEAD
-    .faq-grid {
-        grid-template-columns: 1fr;
-=======
     .contact-container {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -343,6 +224,5 @@
 
     .faq h2 {
         font-size: 2rem;
->>>>>>> Master_R
     }
 }

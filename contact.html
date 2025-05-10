@@ -271,31 +271,20 @@
             <div class="faq-item">
                 <h3>How can I contribute content?</h3>
                 <p>We welcome contributions from the community! You can submit articles, tutorials, or project showcases
-                    <<<<<<< HEAD through our content submission form.</p>
-                        =======
-                        through our content submission form. Our team reviews all submissions to ensure quality and
-                        relevance.
-                </p>
-                >>>>>>> Master_R
+                    through our content submission form. Our team reviews all submissions to ensure quality and
+                    relevance.</p>
             </div>
             <div class="faq-item">
                 <h3>Do you offer partnerships?</h3>
                 <p>Yes! We're always looking for partners who share our vision of democratizing AI education in India.
-                    <<<<<<< HEAD </p>
-                        =======
-                        Whether you're an educational institution, tech company, or community organization, we'd love to
-                        explore collaboration opportunities.
-                </p>
-                >>>>>>> Master_R
+                    Whether you're an educational institution, tech company, or community organization, we'd love to
+                    explore collaboration opportunities.</p>
             </div>
             <div class="faq-item">
                 <h3>How can I join the community?</h3>
                 <p>Join our Discord server or Telegram group to connect with other AI enthusiasts and stay updated with
-                    <<<<<<< HEAD our activities.</p>
-                        =======
-                        our activities. We host regular events, workshops, and discussions to foster learning and
-                        collaboration.
-                </p>
+                    our activities. We host regular events, workshops, and discussions to foster learning and
+                    collaboration.</p>
             </div>
             <div class="faq-item">
                 <h3>Are the learning resources free?</h3>
@@ -311,7 +300,6 @@
                 <h3>Do you offer certificates?</h3>
                 <p>Yes, we provide certificates of completion for our learning paths and courses. These certificates are
                     recognized by our partner organizations and can be added to your professional profile.</p>
-                >>>>>>> Master_R
             </div>
         </div>
     </section>
@@ -331,19 +319,12 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <<<<<<< HEAD <li><a href="/">Home</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/learn">Learning Hub</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        =======
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="learn.html">Learn</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="community.html">Community</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        >>>>>>> Master_R
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -369,22 +350,22 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <<<<<<< HEAD=======<script>
+    <script>
         // FAQ Toggle Functionality
         document.querySelectorAll('.faq-item').forEach(item => {
-        item.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
 
-        // Close all FAQ items
-        document.querySelectorAll('.faq-item').forEach(faqItem => {
-        faqItem.classList.remove('active');
-        });
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
 
-        // If the clicked item wasn't active, make it active
-        if (!isActive) {
-        item.classList.add('active');
-        }
-        });
+                // If the clicked item wasn't active, make it active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
         });
 
         // Mobile Menu Toggle
@@ -392,19 +373,18 @@
         const navLinks = document.querySelector('.nav-links');
 
         mobileMenuBtn.addEventListener('click', () => {
-        mobileMenuBtn.classList.toggle('active');
-        navLinks.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
         });
 
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
-        if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
-        mobileMenuBtn.classList.remove('active');
-        navLinks.classList.remove('active');
-        }
+            if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
         });
-        </script>
-        >>>>>>> Master_R
+    </script>
 </body>
 
 </html>
