@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - India ka AI</title>
+    <meta name="description"
+        content="Latest news, tutorials, and insights about AI in India. Stay updated with the Indian AI ecosystem.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components/navbar.css">
+    <link rel="stylesheet" href="styles/pages/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Blog Specific Styles */
+        .blog-hero {
+            background: linear-gradient(135deg, #0f766e, #14b8a6);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 4rem;
+        }
+
+        .blog-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 2rem;
+            background: transparent;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .blog-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .blog-tag {
+            background: var(--light-bg);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-widget {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            padding-left: 2.5rem;
+            border: 2px solid var(--light-bg);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .search-box::before {
+            content: "🔍";
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .popular-posts {
+            list-style: none;
+            padding: 0;
+        }
+
+        .popular-post {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-bg);
+        }
+
+        .popular-post img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag-cloud a {
+            background: var(--light-bg);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .tag-cloud a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="assets/img/logo.png" alt="India ka AI Logo">
+                India ka AI
+            </a>
+            <div class="nav-links">
+                <a href="learn.html">Learn</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="community.html">Community</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <h1>Latest in Indian AI</h1>
+        <p>Stay updated with news, tutorials, and insights from the Indian AI ecosystem.</p>
+    </section>
+
+    <!-- Blog Content -->
+    <div class="blog-container">
+        <main class="blog-main">
+            <!-- Blog Filters -->
+            <div class="blog-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Startups</button>
+                <button class="filter-btn">Tutorials</button>
+                <button class="filter-btn">Policy</button>
+                <button class="filter-btn">Founder's Voice</button>
+                <button class="filter-btn">Student Stories</button>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <!-- Featured Post -->
+                <article class="blog-card featured">
+                    <img src="assets/img/featured-post.jpg" alt="Featured Post">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Featured</span>
+                            <span class="blog-date">March 15, 2024</span>
+                        </div>
+                        <h2>The Rise of AI in India: A Comprehensive Overview</h2>
+                        <p>Exploring the growth of AI adoption across Indian industries and its impact on the economy.
+                        </p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Regular Posts -->
+                <article class="blog-card">
+                    <img src="assets/img/blog-1.jpg" alt="Blog Post 1">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Tutorials</span>
+                            <span class="blog-date">March 14, 2024</span>
+                        </div>
+                        <h3>Getting Started with AI: A Beginner's Guide</h3>
+                        <p>Step-by-step guide to begin your AI journey with practical examples.</p>
+                        <a href="#" class="btn btn-secondary">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <img src="assets/img/blog-2.jpg" alt="Blog Post 2">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Startups</span>
+                            <span class="blog-date">March 13, 2024</span>
+                        </div>
+                        <h3>Top 10 AI Startups in India to Watch</h3>
+                        <p>Discover innovative AI startups making waves in the Indian market.</p>
+                        <a href="#" class="btn btn-secondary">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+            <!-- Search Box -->
+            <div class="sidebar-widget">
+                <h3>Search</h3>
+                <form class="search-form">
+                    <input type="search" placeholder="Search articles...">
+                    <button type="submit">🔍</button>
+                </form>
+            </div>
+
+            <!-- Popular Posts -->
+            <div class="sidebar-widget">
+                <h3>Popular Posts</h3>
+                <div class="popular-posts">
+                    <a href="#" class="popular-post">
+                        <img src="assets/img/popular-1.jpg" alt="Popular Post 1">
+                        <div class="popular-post-content">
+                            <h4>AI in Healthcare: Indian Innovations</h4>
+                            <span class="post-date">March 12, 2024</span>
+                        </div>
+                    </a>
+                    <a href="#" class="popular-post">
+                        <img src="assets/img/popular-2.jpg" alt="Popular Post 2">
+                        <div class="popular-post-content">
+                            <h4>Building Your First AI Model</h4>
+                            <span class="post-date">March 11, 2024</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="sidebar-widget">
+                <h3>Tags</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">Machine Learning</a>
+                    <a href="#" class="tag">Deep Learning</a>
+                    <a href="#" class="tag">Startups</a>
+                    <a href="#" class="tag">Tutorials</a>
+                    <a href="#" class="tag">Research</a>
+                    <a href="#" class="tag">Policy</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Subscribe to Our Weekly Newsletter</h2>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/learn">Learning Hub</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="Reddit">🔴</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="YouTube">📺</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 India ka AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

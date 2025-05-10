@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Hub - India ka AI</title>
+    <meta name="description"
+        content="Free AI learning resources and structured paths for Indian developers and students. Start your AI journey today.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components/navbar.css">
+    <link rel="stylesheet" href="styles/pages/learn.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Learning Hub Specific Styles */
+        .learning-hero {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .learning-paths {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .path-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 2rem;
+            background: transparent;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .path-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .path-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .path-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .path-content {
+            padding: 1.5rem;
+        }
+
+        .path-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .path-tag {
+            background: var(--light-bg);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .difficulty {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .beginner {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .intermediate {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .advanced {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="assets/img/logo.png" alt="India ka AI Logo">
+                India ka AI
+            </a>
+            <div class="nav-links">
+                <a href="learn.html" class="active">Learn</a>
+                <a href="blog.html">Blog</a>
+                <a href="community.html">Community</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Learning Hero Section -->
+    <section class="learning-hero">
+        <h1>Start Learning AI Today</h1>
+        <p>No signup, no paywalls. Just pure learning.</p>
+    </section>
+
+    <!-- Learning Paths Section -->
+    <section class="learning-paths">
+        <div class="path-filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Beginner</button>
+            <button class="filter-btn">Intermediate</button>
+            <button class="filter-btn">Advanced</button>
+            <button class="filter-btn">Hindi</button>
+            <button class="filter-btn">English</button>
+        </div>
+
+        <div class="path-grid">
+            <!-- Python for AI -->
+            <article class="path-card">
+                <img src="assets/img/python-ai.jpg" alt="Python for AI">
+                <div class="path-content">
+                    <span class="difficulty beginner">Beginner</span>
+                    <h3>Python for AI</h3>
+                    <p>Master Python fundamentals and essential libraries for AI development.</p>
+                    <div class="path-tags">
+                        <span class="path-tag">Python</span>
+                        <span class="path-tag">NumPy</span>
+                        <span class="path-tag">Pandas</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Start Learning</a>
+                </div>
+            </article>
+
+            <!-- Machine Learning Basics -->
+            <article class="path-card">
+                <img src="assets/img/ml-basics.jpg" alt="Machine Learning Basics">
+                <div class="path-content">
+                    <span class="difficulty intermediate">Intermediate</span>
+                    <h3>Machine Learning Basics</h3>
+                    <p>Learn core ML concepts and implement your first models.</p>
+                    <div class="path-tags">
+                        <span class="path-tag">ML</span>
+                        <span class="path-tag">Scikit-learn</span>
+                        <span class="path-tag">Hindi</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Start Learning</a>
+                </div>
+            </article>
+
+            <!-- Deep Learning -->
+            <article class="path-card">
+                <img src="assets/img/deep-learning.jpg" alt="Deep Learning">
+                <div class="path-content">
+                    <span class="difficulty advanced">Advanced</span>
+                    <h3>Deep Learning</h3>
+                    <p>Build neural networks and understand advanced AI concepts.</p>
+                    <div class="path-tags">
+                        <span class="path-tag">PyTorch</span>
+                        <span class="path-tag">TensorFlow</span>
+                        <span class="path-tag">English</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Start Learning</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Stay Updated with AI Learning Resources</h2>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/learn">Learning Hub</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="Reddit">🔴</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="YouTube">📺</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 India ka AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

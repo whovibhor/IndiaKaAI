@@ -1,0 +1,240 @@
+/* Community Hero Section */
+.community-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.community-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.community-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Featured Startups Section */
+.featured-startups {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.featured-startups h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.startup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.startup-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.startup-card:hover {
+    transform: translateY(-5px);
+}
+
+.startup-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.startup-content {
+    padding: 1.5rem;
+}
+
+.startup-content h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.startup-content p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.startup-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.startup-tag {
+    background: var(--bg-light);
+    color: var(--text-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Student Projects Section */
+.student-projects {
+    background: var(--bg-light);
+    padding: 4rem 2rem;
+}
+
+.student-projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.project-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-content h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.project-content p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Monthly Spotlight Section */
+.monthly-spotlight {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.monthly-spotlight h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.spotlight-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.spotlight-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.spotlight-content {
+    padding: 2rem;
+}
+
+.spotlight-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.spotlight-role {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.spotlight-description {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Submit Project Section */
+.submit-project {
+    background: var(--bg-light);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.submit-project h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.submit-project p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .community-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .community-hero p {
+        font-size: 1rem;
+    }
+
+    .featured-startups h2,
+    .student-projects h2,
+    .monthly-spotlight h2,
+    .submit-project h2 {
+        font-size: 2rem;
+    }
+
+    .spotlight-card {
+        grid-template-columns: 1fr;
+    }
+
+    .spotlight-card img {
+        height: 300px;
+    }
+}
