@@ -271,17 +271,35 @@
             <div class="faq-item">
                 <h3>How can I contribute content?</h3>
                 <p>We welcome contributions from the community! You can submit articles, tutorials, or project showcases
-                    through our content submission form.</p>
+                    through our content submission form. Our team reviews all submissions to ensure quality and
+                    relevance.</p>
             </div>
             <div class="faq-item">
                 <h3>Do you offer partnerships?</h3>
                 <p>Yes! We're always looking for partners who share our vision of democratizing AI education in India.
-                </p>
+                    Whether you're an educational institution, tech company, or community organization, we'd love to
+                    explore collaboration opportunities.</p>
             </div>
             <div class="faq-item">
                 <h3>How can I join the community?</h3>
                 <p>Join our Discord server or Telegram group to connect with other AI enthusiasts and stay updated with
-                    our activities.</p>
+                    our activities. We host regular events, workshops, and discussions to foster learning and
+                    collaboration.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Are the learning resources free?</h3>
+                <p>Yes! All our learning resources, including courses, tutorials, and project guides, are completely
+                    free. We believe in making AI education accessible to everyone in India.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How can I get help with my AI project?</h3>
+                <p>You can get help through our community forums, Discord server, or by attending our regular office
+                    hours. We also have a mentorship program where experienced AI practitioners guide beginners.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer certificates?</h3>
+                <p>Yes, we provide certificates of completion for our learning paths and courses. These certificates are
+                    recognized by our partner organizations and can be added to your professional profile.</p>
             </div>
         </div>
     </section>
@@ -331,6 +349,24 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+
+                // If the clicked item wasn't active, make it active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

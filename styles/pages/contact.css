@@ -105,6 +105,91 @@
     color: var(--secondary-color);
 }
 
+/* FAQ Section */
+.faq {
+    background: var(--light-bg);
+    padding: 4rem 2rem;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.faq-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+}
+
+.faq-item:hover::before {
+    transform: scaleY(1);
+}
+
+.faq-item h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.faq-item h3::before {
+    content: '❓';
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.faq-item p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin 0.3s ease;
+}
+
+.faq-item.active p {
+    max-height: 200px;
+    margin-top: 1rem;
+}
+
+.faq-item.active h3::before {
+    content: '💡';
+}
+
 /* Map Section */
 .map {
     margin-top: 4rem;
@@ -135,5 +220,9 @@
 
     .map iframe {
         height: 300px;
+    }
+
+    .faq h2 {
+        font-size: 2rem;
     }
 }
