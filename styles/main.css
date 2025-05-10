@@ -1,12 +1,14 @@
 /* CSS Variables */
 :root {
-    --primary-color: #4f46e5;
-    --secondary-color: #7c3aed;
-    --text-color: #1f2937;
-    --text-muted: #6b7280;
-    --bg-light: #f3f4f6;
-    --bg-white: #ffffff;
-    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --light-blue: #5fcdd9;
+    --deep-teal: #027373;
+    --dark-navy: #172026;
+    --bright-teal: #04bfad;
+    --mint-teal: #04bf9d;
+    --dark-bg: #0a0f14;
+    --dark-surface: #121a20;
+    --dark-text: #e4e6eb;
+    --dark-text-secondary: #b0b3b8;
 }
 
 /* Reset and Base Styles */
@@ -18,54 +20,53 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    line-height: 1.5;
-    color: var(--text-color);
-    background: var(--bg-white);
+    color: var(--dark-text);
+    line-height: 1.6;
+    background-color: var(--dark-bg);
 }
 
 /* Button Styles */
 .btn {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 8px;
     text-decoration: none;
-    cursor: pointer;
+    font-weight: 600;
     transition: all 0.3s ease;
-    border: none;
 }
 
 .btn-primary {
-    background: var(--primary-color);
-    color: var(--bg-white);
+    background-color: var(--deep-teal);
+    color: var(--dark-text);
 }
 
 .btn-primary:hover {
-    background: var(--secondary-color);
+    background-color: var(--bright-teal);
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--bg-white);
-    border: 2px solid var(--bg-white);
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
+    border: 1px solid var(--bright-teal);
 }
 
 .btn-secondary:hover {
-    background: var(--bg-white);
-    color: var(--primary-color);
+    background-color: var(--bright-teal);
     transform: translateY(-2px);
 }
 
 /* Newsletter Section */
 .newsletter {
-    padding: 4rem 2rem;
-    background: var(--bg-light);
+    background-color: var(--dark-surface);
+    color: var(--dark-text);
     text-align: center;
+    padding: 4rem 2rem;
 }
 
 .newsletter h2 {
     margin-bottom: 2rem;
+    color: var(--dark-text);
 }
 
 .newsletter-form {
@@ -78,15 +79,21 @@ body {
 .newsletter-form input {
     flex: 1;
     padding: 0.75rem 1rem;
-    border: 2px solid var(--bg-light);
+    border: 1px solid var(--deep-teal);
     border-radius: 0.5rem;
     font-size: 1rem;
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.newsletter-form input::placeholder {
+    color: var(--dark-text-secondary);
 }
 
 /* Footer Styles */
 .footer {
-    background: var(--text-color);
-    color: var(--bg-white);
+    background: var(--dark-surface);
+    color: var(--dark-text);
     padding: 4rem 2rem 2rem;
 }
 
@@ -100,6 +107,7 @@ body {
 
 .footer-section h3 {
     margin-bottom: 1rem;
+    color: var(--dark-text);
 }
 
 .footer-section ul {
@@ -111,19 +119,35 @@ body {
 }
 
 .footer-section a {
-    color: var(--bg-white);
+    color: var(--dark-text-secondary);
     text-decoration: none;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-    opacity: 1;
+    color: var(--bright-teal);
 }
 
 .social-icons {
     display: flex;
     gap: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--dark-text);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    color: var(--bright-teal);
 }
 
 .footer-bottom {
@@ -132,7 +156,7 @@ body {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
-    opacity: 0.8;
+    color: var(--dark-text-secondary);
 }
 
 /* Responsive Design */
@@ -149,4 +173,14 @@ body {
     .social-icons {
         justify-content: center;
     }
+}
+
+section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }

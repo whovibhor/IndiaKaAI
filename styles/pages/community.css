@@ -1,7 +1,7 @@
 /* Community Hero Section */
 .community-hero {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    color: white;
+    background: linear-gradient(135deg, var(--dark-surface), var(--deep-teal));
+    color: var(--dark-text);
     padding: 8rem 2rem 4rem;
     text-align: center;
 }
@@ -15,6 +15,7 @@
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
+    color: var(--dark-text-secondary);
 }
 
 /* Featured Startups Section */
@@ -28,7 +29,7 @@
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--text-color);
+    color: var(--dark-text);
 }
 
 .startup-grid {
@@ -39,21 +40,24 @@
 }
 
 .startup-card {
-    background: white;
+    background: var(--dark-surface);
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .startup-card:hover {
     transform: translateY(-5px);
+    border-color: var(--bright-teal);
 }
 
 .startup-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    filter: brightness(0.8);
 }
 
 .startup-content {
@@ -62,11 +66,11 @@
 
 .startup-content h3 {
     margin-bottom: 0.5rem;
-    color: var(--text-color);
+    color: var(--dark-text);
 }
 
 .startup-content p {
-    color: var(--text-muted);
+    color: var(--dark-text-secondary);
     margin-bottom: 1rem;
     line-height: 1.6;
 }
@@ -78,15 +82,17 @@
 }
 
 .startup-tag {
-    background: var(--light-bg);
+    background: var(--dark-bg);
+    color: var(--dark-text-secondary);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.875rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Student Projects Section */
 .student-projects {
-    background: var(--light-bg);
+    background: var(--dark-bg);
     padding: 4rem 2rem;
 }
 
@@ -94,7 +100,7 @@
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--text-color);
+    color: var(--dark-text);
 }
 
 .projects-container {
@@ -102,7 +108,7 @@
     margin: 0 auto;
 }
 
-.projects-grid {
+.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -110,15 +116,17 @@
 }
 
 .project-card {
-    background: white;
+    background: var(--dark-surface);
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    border-color: var(--bright-teal);
 }
 
 .project-content {
@@ -127,11 +135,11 @@
 
 .project-content h3 {
     margin-bottom: 0.5rem;
-    color: var(--text-color);
+    color: var(--dark-text);
 }
 
 .project-content p {
-    color: var(--text-muted);
+    color: var(--dark-text-secondary);
     margin-bottom: 1rem;
     line-height: 1.6;
 }
@@ -142,20 +150,29 @@
     align-items: center;
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--light-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--dark-text-secondary);
 }
 
-.student-info {
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-links a {
+    color: var(--dark-text);
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: color 0.3s ease;
 }
 
-.student-info img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
+.project-links a:hover {
+    color: white;
+    transform: translateX(1px);
+    transition: all 0.5s ease;
 }
 
 /* Monthly Spotlight Section */
@@ -169,57 +186,67 @@
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--text-color);
-}
-
-.spotlight-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    color: var(--dark-text);
 }
 
 .spotlight-card {
-    background: white;
+    background: var(--dark-surface);
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 .spotlight-card:hover {
     transform: translateY(-5px);
+    border-color: var(--bright-teal);
 }
 
 .spotlight-content {
-    padding: 1.5rem;
+    text-align: center;
+    color: var(--dark-text);
 }
 
 .spotlight-content h3 {
     margin-bottom: 0.5rem;
-    color: var(--text-color);
+    color: var(--dark-text);
 }
 
 .spotlight-content p {
-    color: var(--text-muted);
+    color: var(--dark-text-secondary);
     margin-bottom: 1rem;
     line-height: 1.6;
 }
 
+.spotlight-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
 /* Submit Project Section */
 .submit-project {
-    background: var(--light-bg);
+    background: linear-gradient(135deg, var(--dark-surface), var(--deep-teal));
     padding: 4rem 2rem;
     text-align: center;
+    color: var(--dark-text);
 }
 
 .submit-project h2 {
     margin-bottom: 1rem;
-    color: var(--text-color);
+    color: var(--dark-text);
 }
 
 .submit-project p {
-    color: var(--text-muted);
+    color: var(--dark-text-secondary);
     max-width: 600px;
     margin: 0 auto 2rem;
 }
@@ -247,7 +274,8 @@
     }
 
     .spotlight-card {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
     }
 
     .spotlight-card img {
