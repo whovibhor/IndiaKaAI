@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - India ka AI</title>
+    <meta name="description"
+        content="Connect with Indian AI startups, projects, and innovators. Join our growing community of AI enthusiasts.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components/navbar.css">
+    <link rel="stylesheet" href="styles/pages/community.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Community Page Specific Styles */
+        .community-hero {
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .community-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Featured Startups Section */
+        .featured-startups {
+            margin-bottom: 6rem;
+        }
+
+        .startup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .startup-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .startup-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .startup-logo {
+            width: 100%;
+            height: 200px;
+            background: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .startup-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .startup-content {
+            padding: 1.5rem;
+        }
+
+        .startup-tech {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            background: var(--light-bg);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+        }
+
+        /* Student Projects Section */
+        .student-projects {
+            margin-bottom: 6rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .project-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Monthly Spotlight */
+        .monthly-spotlight {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+            margin-bottom: 6rem;
+        }
+
+        .spotlight-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .spotlight-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            object-fit: cover;
+        }
+
+        /* Submit Project CTA */
+        .submit-project {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #0f766e, #14b8a6);
+            color: white;
+            margin-bottom: 6rem;
+        }
+
+        .submit-project h2 {
+            margin-bottom: 1rem;
+        }
+
+        .submit-project p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="assets/img/logo.svg" alt="India ka AI Logo">
+                India ka AI
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="learn.html">Learn</a>
+                <a href="blog.html">Blog</a>
+                <a href="community.html" class="active">Community</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Community Hero Section -->
+    <section class="community-hero">
+        <h1>Join India's AI Community</h1>
+        <p>Connect with startups, projects, and innovators shaping India's AI future.</p>
+    </section>
+
+    <!-- Featured Startups Section -->
+    <section class="featured-startups">
+        <h2>Featured AI Startups</h2>
+        <div class="startup-grid">
+            <article class="startup-card">
+                <img src="assets/img/startup-1.jpg" alt="AI Healthcare Startup">
+                <div class="startup-content">
+                    <h3>MedAI Solutions</h3>
+                    <p>Revolutionizing healthcare with AI-powered diagnostics and patient care solutions.</p>
+                    <div class="startup-tags">
+                        <span class="startup-tag">Healthcare</span>
+                        <span class="startup-tag">Machine Learning</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Visit Website</a>
+                </div>
+            </article>
+
+            <article class="startup-card">
+                <img src="assets/img/startup-2.jpg" alt="AI Education Startup">
+                <div class="startup-content">
+                    <h3>EduTech AI</h3>
+                    <p>Personalized learning experiences powered by artificial intelligence.</p>
+                    <div class="startup-tags">
+                        <span class="startup-tag">Education</span>
+                        <span class="startup-tag">Deep Learning</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Visit Website</a>
+                </div>
+            </article>
+
+            <article class="startup-card">
+                <img src="assets/img/startup-3.jpg" alt="AI Finance Startup">
+                <div class="startup-content">
+                    <h3>FinAI Analytics</h3>
+                    <p>AI-driven financial analysis and investment recommendations.</p>
+                    <div class="startup-tags">
+                        <span class="startup-tag">Finance</span>
+                        <span class="startup-tag">NLP</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Visit Website</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Student Projects Section -->
+    <section class="student-projects">
+        <h2>Student Projects</h2>
+        <div class="project-grid">
+            <article class="project-card">
+                <div class="project-content">
+                    <h3>AI-Powered Crop Disease Detection</h3>
+                    <p>Using computer vision to identify plant diseases in Indian agriculture.</p>
+                    <div class="project-meta">
+                        <span class="project-author">By Rahul Kumar</span>
+                        <span class="project-institution">IIT Delhi</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-secondary">View Demo</a>
+                        <a href="#" class="btn btn-secondary">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-content">
+                    <h3>Smart Traffic Management System</h3>
+                    <p>Real-time traffic analysis and optimization using AI.</p>
+                    <div class="project-meta">
+                        <span class="project-author">By Priya Sharma</span>
+                        <span class="project-institution">IIIT Bangalore</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-secondary">View Demo</a>
+                        <a href="#" class="btn btn-secondary">GitHub</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Monthly Spotlight -->
+    <section class="monthly-spotlight">
+        <h2>Monthly Spotlight</h2>
+        <div class="spotlight-card">
+            <img src="assets/img/spotlight.jpg" alt="Monthly Spotlight">
+            <div class="spotlight-content">
+                <h3>Dr. Amit Patel</h3>
+                <p class="spotlight-role">AI Researcher & Educator</p>
+                <p class="spotlight-description">Pioneering work in natural language processing for Indian languages and
+                    making AI education accessible to all.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Project CTA -->
+    <section class="submit-project">
+        <h2>Have an AI Project?</h2>
+        <p>Share your work with the community and get featured on our platform.</p>
+        <a href="#" class="btn btn-primary">Submit Your Project</a>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Stay Connected with the Community</h2>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/learn">Learning Hub</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="Reddit">🔴</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="YouTube">📺</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 India ka AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
