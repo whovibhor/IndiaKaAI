@@ -11,108 +11,6 @@
     <link rel="stylesheet" href="styles/components/navbar.css">
     <link rel="stylesheet" href="styles/pages/learn.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Learning Hub Specific Styles */
-        .learning-hero {
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
-            color: white;
-            padding: 8rem 2rem 4rem;
-            text-align: center;
-        }
-
-        .learning-paths {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .path-filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.5rem 1rem;
-            border: 2px solid var(--primary-color);
-            border-radius: 2rem;
-            background: transparent;
-            color: var(--primary-color);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .filter-btn.active {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .path-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .path-card {
-            background: white;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .path-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .path-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .path-content {
-            padding: 1.5rem;
-        }
-
-        .path-tags {
-            display: flex;
-            gap: 0.5rem;
-            margin: 1rem 0;
-            flex-wrap: wrap;
-        }
-
-        .path-tag {
-            background: var(--light-bg);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-        }
-
-        .difficulty {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-            margin-bottom: 1rem;
-        }
-
-        .beginner {
-            background: #dcfce7;
-            color: #166534;
-        }
-
-        .intermediate {
-            background: #fef3c7;
-            color: #92400e;
-        }
-
-        .advanced {
-            background: #fee2e2;
-            color: #991b1b;
-        }
-    </style>
 </head>
 
 <body>
@@ -120,9 +18,19 @@
     <header class="header">
         <nav class="nav-container">
             <a href="/" class="logo">
-                <img src="assets/img/logo.png" alt="India ka AI Logo">
-                India ka AI
+                <<<<<<< HEAD <img src="assets/img/logo.png" alt="India ka AI Logo">
+                    India ka AI
             </a>
+            =======
+            <img src="assets/img/logo.svg" alt="India ka AI Logo">
+            India ka AI
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            >>>>>>> Master_R
             <div class="nav-links">
                 <a href="learn.html" class="active">Learn</a>
                 <a href="blog.html">Blog</a>
@@ -153,50 +61,62 @@
         <div class="path-grid">
             <!-- Python for AI -->
             <article class="path-card">
-                <img src="assets/img/python-ai.jpg" alt="Python for AI">
-                <div class="path-content">
-                    <span class="difficulty beginner">Beginner</span>
-                    <h3>Python for AI</h3>
-                    <p>Master Python fundamentals and essential libraries for AI development.</p>
-                    <div class="path-tags">
-                        <span class="path-tag">Python</span>
-                        <span class="path-tag">NumPy</span>
-                        <span class="path-tag">Pandas</span>
+                <<<<<<< HEAD <img src="assets/img/python-ai.jpg" alt="Python for AI">
+                    =======
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Python for AI">
+                    >>>>>>> Master_R
+                    <div class="path-content">
+                        <span class="difficulty beginner">Beginner</span>
+                        <h3>Python for AI</h3>
+                        <p>Master Python fundamentals and essential libraries for AI development.</p>
+                        <div class="path-tags">
+                            <span class="path-tag">Python</span>
+                            <span class="path-tag">NumPy</span>
+                            <span class="path-tag">Pandas</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Start Learning</a>
                     </div>
-                    <a href="#" class="btn btn-primary">Start Learning</a>
-                </div>
             </article>
 
             <!-- Machine Learning Basics -->
             <article class="path-card">
-                <img src="assets/img/ml-basics.jpg" alt="Machine Learning Basics">
-                <div class="path-content">
-                    <span class="difficulty intermediate">Intermediate</span>
-                    <h3>Machine Learning Basics</h3>
-                    <p>Learn core ML concepts and implement your first models.</p>
-                    <div class="path-tags">
-                        <span class="path-tag">ML</span>
-                        <span class="path-tag">Scikit-learn</span>
-                        <span class="path-tag">Hindi</span>
+                <<<<<<< HEAD <img src="assets/img/ml-basics.jpg" alt="Machine Learning Basics">
+                    =======
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop&q=60"
+                        alt="Machine Learning Basics">
+                    >>>>>>> Master_R
+                    <div class="path-content">
+                        <span class="difficulty intermediate">Intermediate</span>
+                        <h3>Machine Learning Basics</h3>
+                        <p>Learn core ML concepts and implement your first models.</p>
+                        <div class="path-tags">
+                            <span class="path-tag">ML</span>
+                            <span class="path-tag">Scikit-learn</span>
+                            <span class="path-tag">Hindi</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Start Learning</a>
                     </div>
-                    <a href="#" class="btn btn-primary">Start Learning</a>
-                </div>
             </article>
 
             <!-- Deep Learning -->
             <article class="path-card">
-                <img src="assets/img/deep-learning.jpg" alt="Deep Learning">
-                <div class="path-content">
-                    <span class="difficulty advanced">Advanced</span>
-                    <h3>Deep Learning</h3>
-                    <p>Build neural networks and understand advanced AI concepts.</p>
-                    <div class="path-tags">
-                        <span class="path-tag">PyTorch</span>
-                        <span class="path-tag">TensorFlow</span>
-                        <span class="path-tag">English</span>
+                <<<<<<< HEAD <img src="assets/img/deep-learning.jpg" alt="Deep Learning">
+                    =======
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                        alt="Deep Learning">
+                    >>>>>>> Master_R
+                    <div class="path-content">
+                        <span class="difficulty advanced">Advanced</span>
+                        <h3>Deep Learning</h3>
+                        <p>Build neural networks and understand advanced AI concepts.</p>
+                        <div class="path-tags">
+                            <span class="path-tag">PyTorch</span>
+                            <span class="path-tag">TensorFlow</span>
+                            <span class="path-tag">English</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Start Learning</a>
                     </div>
-                    <a href="#" class="btn btn-primary">Start Learning</a>
-                </div>
             </article>
         </div>
     </section>
@@ -216,11 +136,19 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/learn">Learning Hub</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <<<<<<< HEAD <li><a href="/">Home</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/learn">Learning Hub</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        =======
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="learn.html">Learn</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        >>>>>>> Master_R
                 </ul>
             </div>
             <div class="footer-section">
@@ -246,6 +174,25 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <<<<<<< HEAD=======<script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+        mobileMenuBtn.classList.remove('active');
+        navLinks.classList.remove('active');
+        }
+        });
+        </script>
+        >>>>>>> Master_R
 </body>
 
 </html>

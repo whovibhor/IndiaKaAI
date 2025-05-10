@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>India ka AI - Democratizing AI Learning in India</title>
+<<<<<<< HEAD
     <meta name="description"
         content="Free AI learning resources, news, and community for Indian developers and students.">
+=======
+    <meta name="description" content="Free AI learning resources, news, and community for Indian developers and students.">
+>>>>>>> Master_R
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/components/navbar.css">
     <link rel="stylesheet" href="styles/pages/home.css">
@@ -18,9 +22,19 @@
     <header class="header">
         <nav class="nav-container">
             <a href="/" class="logo">
+<<<<<<< HEAD
                 <img src="assets/img/logo.png" alt="India ka AI Logo">
                 India ka AI
             </a>
+=======
+                <img src="assets/img/logo.svg" alt="India ka AI Logo"> India ka AI
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+>>>>>>> Master_R
             <div class="nav-links">
                 <a href="learn.html">Learn</a>
                 <a href="blog.html">Blog</a>
@@ -46,8 +60,12 @@
     <section class="about">
         <div class="about-content">
             <h2>About India ka AI</h2>
+<<<<<<< HEAD
             <p>We're on a mission to make AI education accessible to everyone in India. Join our community of learners,
                 developers, and innovators.</p>
+=======
+            <p>We're on a mission to make AI education accessible to everyone in India. Join our community of learners, developers, and innovators.</p>
+>>>>>>> Master_R
             <a href="/about" class="btn btn-primary">Learn More</a>
         </div>
     </section>
@@ -80,7 +98,11 @@
     <section class="blog">
         <div class="blog-grid">
             <article class="blog-card">
+<<<<<<< HEAD
                 <img src="assets/img/blog1.jpg" alt="Blog post thumbnail">
+=======
+                <img src="https://img.freepik.com/free-photo/futuristic-half-robot-tiger_23-2151558805.jpg?ga=GA1.1.114658315.1746879332&semt=ais_hybrid&w=740" alt="Blog post thumbnail">
+>>>>>>> Master_R
                 <div class="blog-content">
                     <h3>The Rise of AI in India</h3>
                     <div class="blog-meta">
@@ -92,7 +114,11 @@
                 </div>
             </article>
             <article class="blog-card">
+<<<<<<< HEAD
                 <img src="assets/img/blog2.jpg" alt="Blog post thumbnail">
+=======
+                <img src="https://img.freepik.com/free-photo/digital-art-ai-technology-background_23-2151719590.jpg?ga=GA1.1.114658315.1746879332&semt=ais_hybrid&w=740" alt="Blog post thumbnail">
+>>>>>>> Master_R
                 <div class="blog-content">
                     <h3>Getting Started with AI</h3>
                     <div class="blog-meta">
@@ -134,11 +160,20 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
+<<<<<<< HEAD
                     <li><a href="/">Home</a></li>
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/learn">Learning Hub</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
+=======
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+>>>>>>> Master_R
                 </ul>
             </div>
             <div class="footer-section">
@@ -164,6 +199,27 @@
     </footer>
 
     <script src="js/main.js"></script>
+<<<<<<< HEAD
+=======
+    <script>
+        // Mobile Menu Toggle for Index Page
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+>>>>>>> Master_R
 </body>
 
 </html>

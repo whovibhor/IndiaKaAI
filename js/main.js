@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', () => {
     // Add mobile menu toggle functionality
@@ -20,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Newsletter form handling
+=======
+// Newsletter form handling
+document.addEventListener('DOMContentLoaded', () => {
+>>>>>>> Master_R
     const newsletterForm = document.querySelector('.newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', (e) => {

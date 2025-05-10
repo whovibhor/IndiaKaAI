@@ -1,9 +1,16 @@
 /* Learning Hero Section */
 .learning-hero {
+<<<<<<< HEAD
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     text-align: center;
     padding: 6rem 2rem;
+=======
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+>>>>>>> Master_R
 }
 
 .learning-hero h1 {
@@ -27,6 +34,7 @@
 /* Path Filters */
 .path-filters {
     display: flex;
+<<<<<<< HEAD
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 3rem;
@@ -39,11 +47,27 @@
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 20px;
+=======
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 2rem;
+    background: transparent;
+    color: var(--primary-color);
+>>>>>>> Master_R
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
+<<<<<<< HEAD
 .filter-btn:hover,
+=======
+>>>>>>> Master_R
 .filter-btn.active {
     background: var(--primary-color);
     color: white;
@@ -58,7 +82,11 @@
 
 .path-card {
     background: white;
+<<<<<<< HEAD
     border-radius: 8px;
+=======
+    border-radius: 1rem;
+>>>>>>> Master_R
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -78,6 +106,7 @@
     padding: 1.5rem;
 }
 
+<<<<<<< HEAD
 .difficulty {
     display: inline-block;
     padding: 0.25rem 0.75rem;
@@ -87,16 +116,49 @@
 }
 
 .difficulty.beginner {
+=======
+.path-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.path-tag {
+    background: var(--light-bg);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+}
+
+.difficulty {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.beginner {
+>>>>>>> Master_R
     background: #dcfce7;
     color: #166534;
 }
 
+<<<<<<< HEAD
 .difficulty.intermediate {
+=======
+.intermediate {
+>>>>>>> Master_R
     background: #fef3c7;
     color: #92400e;
 }
 
+<<<<<<< HEAD
 .difficulty.advanced {
+=======
+.advanced {
+>>>>>>> Master_R
     background: #fee2e2;
     color: #991b1b;
 }
@@ -112,6 +174,7 @@
     line-height: 1.6;
 }
 
+<<<<<<< HEAD
 .path-tags {
     display: flex;
     flex-wrap: wrap;
@@ -127,6 +190,8 @@
     font-size: 0.9rem;
 }
 
+=======
+>>>>>>> Master_R
 /* Responsive Design */
 @media (max-width: 768px) {
     .learning-hero h1 {

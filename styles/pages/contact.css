@@ -1,9 +1,16 @@
 /* Contact Hero Section */
 .contact-hero {
+<<<<<<< HEAD
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     text-align: center;
     padding: 6rem 2rem;
+=======
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+>>>>>>> Master_R
 }
 
 .contact-hero h1 {
@@ -17,16 +24,28 @@
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 /* Contact Container */
 .contact-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
+=======
+/* Contact Section */
+.contact {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.contact-container {
+>>>>>>> Master_R
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
 }
 
+<<<<<<< HEAD
 /* Contact Form Section */
 .contact-form-section {
     background: white;
@@ -40,6 +59,16 @@
     color: var(--text-color);
 }
 
+=======
+/* Contact Form */
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+>>>>>>> Master_R
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -52,23 +81,35 @@
 }
 
 .form-group input,
+<<<<<<< HEAD
 .form-group select,
 .form-group textarea {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+=======
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--light-bg);
+    border-radius: 0.5rem;
+>>>>>>> Master_R
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
+<<<<<<< HEAD
 .form-group select:focus,
+=======
+>>>>>>> Master_R
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
 }
 
+<<<<<<< HEAD
 /* Contact Info Section */
 .contact-info {
     padding: 2rem;
@@ -81,12 +122,24 @@
 
 .info-cards {
     display: grid;
+=======
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+>>>>>>> Master_R
     gap: 2rem;
 }
 
 .info-card {
     background: white;
     padding: 2rem;
+<<<<<<< HEAD
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -96,6 +149,10 @@
     font-size: 2rem;
     margin-bottom: 1rem;
     display: block;
+=======
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+>>>>>>> Master_R
 }
 
 .info-card h3 {
@@ -103,6 +160,7 @@
     color: var(--text-color);
 }
 
+<<<<<<< HEAD
 .social-links {
     display: flex;
     justify-content: center;
@@ -118,16 +176,40 @@
 
 .social-links a:hover {
     color: var(--primary-color);
+=======
+.info-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.info-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+    color: var(--secondary-color);
+>>>>>>> Master_R
 }
 
 /* FAQ Section */
 .faq {
+<<<<<<< HEAD
     background: var(--bg-light);
+=======
+    background: var(--light-bg);
+>>>>>>> Master_R
     padding: 4rem 2rem;
 }
 
 .faq h2 {
     text-align: center;
+<<<<<<< HEAD
+=======
+    font-size: 2.5rem;
+>>>>>>> Master_R
     margin-bottom: 3rem;
     color: var(--text-color);
 }
@@ -143,27 +225,101 @@
 .faq-item {
     background: white;
     padding: 2rem;
+<<<<<<< HEAD
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+=======
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+}
+
+.faq-item:hover::before {
+    transform: scaleY(1);
+>>>>>>> Master_R
 }
 
 .faq-item h3 {
     color: var(--text-color);
     margin-bottom: 1rem;
+<<<<<<< HEAD
+=======
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.faq-item h3::before {
+    content: '❓';
+    font-size: 1.5rem;
+    opacity: 0.7;
+>>>>>>> Master_R
 }
 
 .faq-item p {
     color: var(--text-muted);
     line-height: 1.6;
+<<<<<<< HEAD
+=======
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin 0.3s ease;
+}
+
+.faq-item.active p {
+    max-height: 200px;
+    margin-top: 1rem;
+}
+
+.faq-item.active h3::before {
+    content: '💡';
+}
+
+/* Map Section */
+.map {
+    margin-top: 4rem;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+>>>>>>> Master_R
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+<<<<<<< HEAD
     .contact-container {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
+=======
+>>>>>>> Master_R
     .contact-hero h1 {
         font-size: 2.5rem;
     }
@@ -172,7 +328,21 @@
         font-size: 1rem;
     }
 
+<<<<<<< HEAD
     .faq-grid {
         grid-template-columns: 1fr;
+=======
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .map iframe {
+        height: 300px;
+    }
+
+    .faq h2 {
+        font-size: 2rem;
+>>>>>>> Master_R
     }
 }
