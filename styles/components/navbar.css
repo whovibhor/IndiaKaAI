@@ -7,15 +7,17 @@
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 0;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
 }
 
 .logo {
@@ -29,8 +31,7 @@
 }
 
 .logo img {
-    height: 32px;
-    filter: brightness(0.8);
+    width: 150px;
 }
 
 .nav-links {
