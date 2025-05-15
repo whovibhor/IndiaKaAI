@@ -13,11 +13,12 @@
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    /* padding: 1rem 2rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 4.5rem;
+    /* Changed from px to rem for better responsiveness */
+    padding: 0rem 2rem;
 }
 
 .logo {
@@ -31,7 +32,12 @@
 }
 
 .logo img {
-    width: 150px;
+    width: 180px;
+    /* Increased from 150px to make logo bigger */
+    max-height: 5rem;
+    /* Added max-height to maintain proportions */
+    object-fit: contain;
+    /* Ensures the logo maintains its aspect ratio */
 }
 
 .nav-links {
@@ -112,11 +118,20 @@
     .mobile-menu-btn.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .logo img {
+        width: 160px;
+        /* Slightly smaller on mobile but still bigger than original */
+    }
 }
 
-/* Remove conflicting styles */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .nav-container {
-        padding: 1rem;
+        padding: 0 1rem;
+    }
+
+    .logo img {
+        width: 140px;
+        /* Adjusted for very small screens but still visible */
     }
 }
