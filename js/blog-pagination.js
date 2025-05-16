@@ -40,9 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
         searchForm.addEventListener('submit', handleSearch);
         searchInput.addEventListener('input', handleSearch);
 
-        // Add dismiss button to featured post
-        setupFeaturedPost();
-
         // Set up pagination
         setupPagination();
 
@@ -71,45 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function scrollToBlogContainer() {
         blogContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    function setupFeaturedPost() {
-        const featuredPost = container.querySelector('.blog-card.featured');
-        if (featuredPost && isFeaturedPostVisible) {
-            // Create dismiss button container
-            const dismissContainer = document.createElement('div');
-            dismissContainer.className = 'dismiss-container';
-
-            // Create dismiss button
-            const dismissButton = document.createElement('button');
-            dismissButton.className = 'dismiss-featured';
-            dismissButton.innerHTML = '×';
-            dismissButton.setAttribute('aria-label', 'Dismiss featured post');
-            dismissButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                handleFeaturedPostDismiss();
-            });
-
-            // Add button to container
-            dismissContainer.appendChild(dismissButton);
-            featuredPost.appendChild(dismissContainer);
-        }
-    }
-
-    function handleFeaturedPostDismiss() {
-        const featuredPost = container.querySelector('.blog-card.featured');
-        if (!featuredPost) return;
-
-        // Add animation class
-        featuredPost.classList.add('dismissing');
-
-        // After animation completes, remove the post and update layout
-        featuredPost.addEventListener('animationend', () => {
-            featuredPost.remove();
-            isFeaturedPostVisible = false;
-            loadPosts(); // Reload posts to adjust layout
-        }, { once: true });
     }
 
     function handleFilterClick(e) {
@@ -177,7 +135,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updatePaginationUI() {
-        const pageCount = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+        // Adjust total posts count for pagination
+        const adjustedTotalPosts = filteredPosts.length - 1; // Subtract 1 for featured post
+        const pageCount = Math.ceil(adjustedTotalPosts / POSTS_PER_PAGE);
 
         // Update page number buttons
         const pageButtons = paginationNumbers.querySelectorAll('.page-number');
@@ -192,56 +152,123 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function loadPosts() {
         // Get posts for current page
-        const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-        const endIndex = startIndex + POSTS_PER_PAGE;
+        let startIndex, endIndex;
+
+        if (currentPage === 1) {
+            // For first page: featured post + 4 regular posts
+            startIndex = 0;
+            endIndex = 5; // 1 featured + 4 regular
+        } else {
+            // For other pages: exactly 4 posts
+            startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+            endIndex = startIndex + POSTS_PER_PAGE;
+        }
+
         const currentPosts = filteredPosts.slice(startIndex, endIndex);
 
-        // Create HTML for posts
-        let postsHTML = '';
+        // Clear the container first
+        container.innerHTML = '';
 
-        // Regular posts
-        currentPosts.forEach(post => {
-            postsHTML += `
-                <article class="blog-card">
-                    <img src="${post.image}" alt="${post.title}">
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-tag">${post.category}</span>
-                            <span class="blog-date">${post.date}</span>
-                        </div>
-                        <h3>${post.title}</h3>
-                        <p>${post.content.substring(0, 150).replace(/<[^>]*>/g, '')}...</p>
-                        <div class="blog-card-actions">
-                            <a href="blog-post.html?id=${post.id}" class="btn btn-secondary">Read More</a>
-                            <div class="blog-card-interaction">
-                                <button class="btn-interact btn-like" aria-label="Like"><i class="far fa-heart"></i>
-                                    <span class="count">${post.likes}</span></button>
-                                <button class="btn-interact btn-comment" aria-label="Comment"><i class="far fa-comment"></i>
-                                    <span class="count">${post.comments}</span></button>
-                                <button class="btn-share" aria-label="Share"><i class="fas fa-share-alt"></i></button>
-                            </div>
+        // Only show featured post on first page
+        if (currentPage === 1 && currentPosts.length > 0) {
+            const featuredPost = currentPosts[0];
+            const featuredCard = document.createElement('article');
+            featuredCard.className = 'blog-card featured';
+            featuredCard.innerHTML = `
+                <img src="${featuredPost.image}" alt="${featuredPost.title}">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">${featuredPost.category}</span>
+                        <span class="blog-date">${featuredPost.date}</span>
+                    </div>
+                    <h3>${featuredPost.title}</h3>
+                    <p>${featuredPost.content.substring(0, 150).replace(/<[^>]*>/g, '')}...</p>
+                    <div class="blog-card-actions">
+                        <a href="blog-post.html?id=${featuredPost.id}" class="btn btn-secondary">Read More</a>
+                        <div class="blog-card-interaction">
+                            <button class="btn-interact btn-like" aria-label="Like"><i class="far fa-heart"></i>
+                                <span class="count">${featuredPost.likes}</span></button>
+                            <button class="btn-interact btn-comment" aria-label="Comment"><i class="far fa-comment"></i>
+                                <span class="count">${featuredPost.comments}</span></button>
+                            <button class="btn-share" aria-label="Share"><i class="fas fa-share-alt"></i></button>
                         </div>
                     </div>
-                </article>
+                </div>
             `;
-        });
+            featuredCard.addEventListener('click', (e) => {
+                if (e.target.closest('.btn-interact') || e.target.closest('.btn-share')) {
+                    return;
+                }
+                window.location.href = `blog-post.html?id=${featuredPost.id}`;
+            });
+            container.appendChild(featuredCard);
 
-        // Remove any previously added regular posts
-        const allCards = container.querySelectorAll('.blog-card:not(.featured)');
-        allCards.forEach(card => {
-            if (!card.classList.contains('featured')) {
-                card.remove();
-            }
-        });
-
-        // Add the new posts
-        if (isFeaturedPostVisible) {
-            const featuredPost = container.querySelector('.blog-card.featured');
-            if (featuredPost) {
-                featuredPost.insertAdjacentHTML('afterend', postsHTML);
-            }
-        } else {
-            container.innerHTML = postsHTML;
+            // Remove the featured post from the regular posts
+            currentPosts.shift();
         }
+
+        // Add the remaining posts
+        currentPosts.forEach(post => {
+            const card = document.createElement('article');
+            card.className = 'blog-card';
+            card.innerHTML = `
+                <img src="${post.image}" alt="${post.title}">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">${post.category}</span>
+                        <span class="blog-date">${post.date}</span>
+                    </div>
+                    <h3>${post.title}</h3>
+                    <p>${post.content.substring(0, 150).replace(/<[^>]*>/g, '')}...</p>
+                    <div class="blog-card-actions">
+                        <a href="blog-post.html?id=${post.id}" class="btn btn-secondary">Read More</a>
+                        <div class="blog-card-interaction">
+                            <button class="btn-interact btn-like" aria-label="Like"><i class="far fa-heart"></i>
+                                <span class="count">${post.likes}</span></button>
+                            <button class="btn-interact btn-comment" aria-label="Comment"><i class="far fa-comment"></i>
+                                <span class="count">${post.comments}</span></button>
+                            <button class="btn-share" aria-label="Share"><i class="fas fa-share-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('.btn-interact') || e.target.closest('.btn-share')) {
+                    return;
+                }
+                window.location.href = `blog-post.html?id=${post.id}`;
+            });
+            container.appendChild(card);
+        });
+
+        // Update pagination
+        updatePagination(filteredPosts.length, currentPage);
+    }
+
+    function updatePagination(totalPosts, currentPage) {
+        // Adjust total posts count for pagination
+        // If we have a featured post, we need to adjust the total count
+        const adjustedTotalPosts = totalPosts - 1; // Subtract 1 for featured post
+        const pageCount = Math.ceil(adjustedTotalPosts / POSTS_PER_PAGE);
+
+        paginationNumbers.innerHTML = '';
+
+        for (let i = 1; i <= pageCount; i++) {
+            const pageNumber = document.createElement('button');
+            pageNumber.className = `page-number ${i === currentPage ? 'active' : ''}`;
+            pageNumber.textContent = i;
+            pageNumber.setAttribute('aria-label', `Page ${i}`);
+
+            pageNumber.addEventListener('click', () => {
+                currentPage = i;
+                loadPosts();
+                updatePaginationUI();
+                scrollToBlogContainer();
+            });
+
+            paginationNumbers.appendChild(pageNumber);
+        }
+
+        updatePaginationUI();
     }
 }); 
