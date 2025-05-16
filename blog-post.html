@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - India ka AI</title>
+    <meta name="description" content="Read our latest articles about AI in India">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components/navbar.css">
+    <link rel="stylesheet" href="styles/pages/blog.css">
+    <link rel="stylesheet" href="styles/pages/blog-post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <img src="assets/img/Logo_HG.png" alt="India ka AI Logo">
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="learn.html">Learn</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="community.html">Community</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Post Content -->
+    <div class="blog-post-container">
+        <article class="blog-post">
+            <div class="blog-post-header">
+                <div class="blog-post-meta">
+                    <span class="blog-tag" id="post-category">Category</span>
+                    <span class="blog-date" id="post-date">Date</span>
+                    <span class="blog-author" id="post-author">Author</span>
+                </div>
+                <h1 id="post-title">Blog Post Title</h1>
+                <img src="" alt="Blog post image" id="post-image" class="blog-post-image">
+            </div>
+
+            <div class="blog-post-content" id="post-content">
+                <!-- Blog content will be loaded dynamically -->
+                <p>This is a placeholder for blog content. The actual content will be loaded dynamically based on the
+                    specific blog post.</p>
+            </div>
+
+            <div class="blog-post-footer">
+                <div class="author-card">
+                    <img src="https://ui-avatars.com/api/?name=Author+Name&background=04BFAd&color=fff" alt="Author"
+                        class="author-image">
+                    <div class="author-details">
+                        <h3 id="author-name">Author Name</h3>
+                        <p id="author-bio">Author bio goes here. This is a brief description of the author of this blog
+                            post.</p>
+                    </div>
+                </div>
+                <div class="share-links">
+                    <h3>Share This Post</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Share on Twitter" class="share-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Share on LinkedIn" class="share-link"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Share on Facebook" class="share-link"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Share on WhatsApp" class="share-link"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <aside class="blog-sidebar">
+            <!-- Search Box -->
+            <div class="sidebar-widget">
+                <h3>Search</h3>
+                <form class="search-form">
+                    <input type="search" placeholder="Search articles...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+
+            <!-- Related Posts -->
+            <div class="sidebar-widget">
+                <h3>Related Posts</h3>
+                <div class="popular-posts" id="related-posts">
+                    <!-- Related posts will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="sidebar-widget">
+                <h3>Tags</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">Machine Learning</a>
+                    <a href="#" class="tag">Deep Learning</a>
+                    <a href="#" class="tag">Startups</a>
+                    <a href="#" class="tag">Tutorials</a>
+                    <a href="#" class="tag">Research</a>
+                    <a href="#" class="tag">Policy</a>
+                </div>
+            </div>
+
+            <!-- Newsletter Mini -->
+            <div class="sidebar-widget">
+                <h3>Subscribe</h3>
+                <p>Get the latest AI news and resources delivered straight to your inbox.</p>
+                <form class="sidebar-newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <!-- More Articles -->
+    <section class="more-articles">
+        <h2>More Articles</h2>
+        <div class="articles-grid">
+            <!-- More articles will be loaded dynamically -->
+        </div>
+        <div class="view-all-link">
+            <a href="blog.html" class="btn btn-primary">View All Articles</a>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Subscribe to Our Weekly Newsletter</h2>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram" style="color: #E1306C;"><i class="fab fa-instagram "></i></a>
+                    <a href="#" aria-label="Reddit" style="color: #FF4500;"><i class="fab fa-reddit "></i></a>
+                    <a href="#" aria-label="Twitter" style="color: #1DA1F2;"><i class="fab fa-twitter "></i></a>
+                    <a href="#" aria-label="YouTube" style="color: #FF0000;"><i class="fab fa-youtube "></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 India ka AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script type="module" src="js/blog-data.js"></script>
+    <script type="module" src="js/blog-pagination.js"></script>
+    <script type="module" src="js/blog-post.js"></script>>
+</body>
+
+</html>
